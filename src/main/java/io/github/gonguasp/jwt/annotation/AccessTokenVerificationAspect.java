@@ -26,13 +26,13 @@ public class AccessTokenVerificationAspect {
   private String accessTokenLiteral;
 
   @Around("@annotation(io.github.gonguasp.jwt.annotation.AccessTokenVerification)")
-  public void processProgressIdVerification(ProceedingJoinPoint joinPoint) throws Throwable {
+  public Object processProgressIdVerification(ProceedingJoinPoint joinPoint) throws Throwable {
     log.info("Validating token {}", accessTokenLiteral);
     String accessToken = request.getHeader(accessTokenLiteral);
     if (!StringUtils.isEmpty(accessToken) &&
         jwtService.validateToken(request.getHeader(accessTokenLiteral))) {
       log.info("Token {} validated.", accessTokenLiteral);
-      joinPoint.proceed();
+      return joinPoint.proceed();
     } else {
       throw new UnauthorizedException("The header " + accessTokenLiteral + " was null or empty.");
     }
