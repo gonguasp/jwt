@@ -1,0 +1,7 @@
+server:
+  port: 8080
+
+jwt:
+  password: secret
+  expiration: 10
+  access-token: accessToken
