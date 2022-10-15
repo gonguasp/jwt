@@ -1,4 +1,4 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.gonguasp/jwt/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.gonguasp/jwt)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.gonguasp/jwt.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.github.gonguasp%22%20AND%20a:%22jwt%22)
 
 # Jwt
 Jwt validator
