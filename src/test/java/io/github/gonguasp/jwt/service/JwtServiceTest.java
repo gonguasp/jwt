@@ -15,7 +15,7 @@ class JwtServiceTest {
   private static String token;
 
   @BeforeAll
-  private static void beforeAll() {
+  static void beforeAll() {
     jwtService = new JwtService("secret", 10L);
     token = jwtService.generateToken(new HashMap<>(Map.of("id", 1, "user", "test")), "test");
   }

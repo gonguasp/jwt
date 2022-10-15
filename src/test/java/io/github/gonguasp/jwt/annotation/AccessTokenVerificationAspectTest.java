@@ -19,7 +19,7 @@ class AccessTokenVerificationAspectTest {
   private static AccessTokenVerificationAspect accessTokenVerificationAspect;
 
   @BeforeAll
-  private static void beforeAll() {
+  static void beforeAll() {
     request = Mockito.mock(HttpServletRequest.class);
     jwtService = Mockito.mock(JwtService.class);
     accessTokenVerificationAspect = new AccessTokenVerificationAspect(request, jwtService);
